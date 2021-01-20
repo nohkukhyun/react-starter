@@ -1,10 +1,10 @@
 import React from 'react'
+import Home from './hooks/Home'
 
 function App() {
-
 	return (
 		<div>
-			테스트 입니다.
+			<Home />
 		</div>
 	)
 }
