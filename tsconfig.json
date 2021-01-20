@@ -21,8 +21,10 @@
     "isolatedModules": true,
     "baseUrl": ".",
     "paths": {
-      "@src/*": ["/src/*"],
-      "@hooks/*": ["/src/hooks/*"]
+      "@src/*": ["src/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@store/*": ["src/store/*"],
+      "@utils/*": ["src/utils/*"],
     }
   },
   "exclude": ["node_modules"],

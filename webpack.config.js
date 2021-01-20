@@ -16,6 +16,12 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
+    alias: {
+      '@src': path.resolve(__dirname, 'src'),
+      '@hooks': path.resolve(__dirname, 'src/hooks'),
+      '@store': path.resolve(__dirname, 'src/store'),
+      '@utils': path.resolve(__dirname, 'src/utils'),
+    },
   },
   module: {
     rules: [
@@ -25,11 +31,11 @@ module.exports = {
       },
       {
         test: /\.html$/i,
-        use:[
+        use: [
           {
             loader: 'html-loader',
-            options:{
-              minimize:true
+            options: {
+              minimize: true
             }
           }
         ]
@@ -44,7 +50,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'style-loader','css-loader',
+          'style-loader', 'css-loader',
         ],
       },
       {
@@ -60,11 +66,11 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: './src/index.html',
-      filename:'./index.html'
+      filename: './index.html'
     }),
     new MiniCssExtractPlugin({
-      filename:'[name].css',
-      chunkFilename:'[id].css'
+      filename: '[name].css',
+      chunkFilename: '[id].css'
     }),
     new CleanWebpackPlugin(),
   ],

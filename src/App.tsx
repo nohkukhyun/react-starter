@@ -1,5 +1,5 @@
 import React from 'react'
-import Home from './hooks/Home'
+import Home from '@hooks/Home'
 
 function App() {
 	return (
