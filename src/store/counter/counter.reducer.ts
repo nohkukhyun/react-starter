@@ -17,7 +17,7 @@ function countReducer(state: countTypes = initialState, action: countActions) {
 				number: state.number + 1
 			}
 
-		case getType(count.increaseCount):
+		case getType(count.decreaseCount):
 			return {
 				...state,
 				number: state.number - 1
