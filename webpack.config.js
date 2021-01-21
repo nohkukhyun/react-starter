@@ -7,6 +7,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = (env, options) => {
   const config = {
+    mode: env.development ? 'development' : 'production',
+    devtool: "source-map",
     entry: {
       app: path.join(__dirname, 'src', 'index.tsx'),
     },
@@ -25,7 +27,7 @@ module.exports = (env, options) => {
       },
     },
     devServer: {
-      port: options.mode === 'development' ? 3000 : 9000
+      port: options.mode === 'development' ? 3000 : 9000,
     },
     optimization: {
       minimizer: [
