@@ -4,7 +4,7 @@ function Home() {
 	console.log("console log test")
 	return (
 		<div>
-			hi
+			{`토나온다`}
 		</div>
 	)
 }

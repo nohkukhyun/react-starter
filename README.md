@@ -9,3 +9,9 @@ React - Basic Setting
  - webpack-cli: 4.4.0
  - webpack-dev-server: 3.11.2
  - ++ dotenv, 
+
+ ## Styles
+ - emotion
+
+ ## babel plugin
+ - optional-chaining
