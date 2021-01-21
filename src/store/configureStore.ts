@@ -1,5 +1,6 @@
-import { createStore, compose } from "redux";
 import rootReducer from "./rootReducer";
+import { createStore, compose } from "redux";
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 declare global {
 	interface Window {
@@ -7,13 +8,10 @@ declare global {
 	}
 }
 
-const devTools = (window as any).__REDUX_DEVTOOLS_EXTENSION__;
-
 function configureStore() {
 	const store = createStore(
 		rootReducer,
-		devTools && devTools()
-
+		composeWithDevTools()
 	);
 
 	return store;
