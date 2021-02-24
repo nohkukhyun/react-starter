@@ -1,9 +1,10 @@
 import React from 'react'
 
-function Home() {
-
+const Home: React.FC = () => {
 	return (
 		<div>
+			반갑습니다 Home 입니다.
+			<div></div>
 		</div>
 	)
 }
